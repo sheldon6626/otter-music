@@ -23,9 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { DownloadQualitySelect } from "./settings/DownloadQualitySelect";
-import { DownloadSettingToggles } from "./settings/DownloadSettingToggles";
-import { DownloadDirectorySelect } from "./settings/DownloadDirectorySelect";
+import { DownloadSetting } from "./settings/DownloadSetting";
 import { SettingItem } from "./settings/SettingItem";
 import { UpdateCheck } from "./settings/UpdateCheck";
 import { IssueLogs } from "./settings/IssueLogs";
@@ -119,9 +117,9 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
             }
           />
           <QualitySelect />
-          <StreamCacheSetting />
           <SleepTimerSetting />
           <PlaybackSpeedSetting />
+          <DownloadSetting />
         </SettingsSection>
 
         <SettingsSection title="界面设置">
@@ -164,12 +162,6 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
           />
         </SettingsSection>
 
-        <SettingsSection title="下载设置">
-          <DownloadQualitySelect />
-          <DownloadSettingToggles />
-          <DownloadDirectorySelect />
-        </SettingsSection>
-
         <SettingsSection title="账号数据">
           <NeteaseLogin />
           <SyncConfig />
@@ -200,6 +192,7 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
 
         <SettingsSection title="高级设置">
           <ApiUrlConfig />
+          <StreamCacheSetting />
         </SettingsSection>
 
         <SettingsSection title="关于系统">
